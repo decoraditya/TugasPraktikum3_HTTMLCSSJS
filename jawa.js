@@ -23,16 +23,16 @@ function delExp(index) {
 }
 
 function render() {
-  let html = "";
+  let hsl = "";
   let total = 0;
 
   for (let i = 0; i < exp.length; i++) {
-    html += exp[i].nama + " - Rp." + exp[i].nominal;
-    html += " <button onclick='delExp(" + i + ")'>Hapus</button><br>";
+    hsl += exp[i].nama + " - Rp." + exp[i].nominal.toLocaleString('id-ID');
+    hsl += " <button onclick='delExp(" + i + ")'>Hapus</button><br>";
     total += exp[i].nominal;
   } 
 
-  document.getElementById("expList").innerHTML = html;
-  document.getElementById("totExp").textContent = total;
+  document.getElementById("expList").innerHTML = hsl;
+  document.getElementById("totExp").textContent = total.toLocaleString('id-ID');
   document.getElementById("amExp").textContent = exp.length;
 }
