@@ -10,12 +10,13 @@
     <h1>Expense tracking</h1>
     <input type="text" id="exInput" placeholder="Nama expense">
     <input type="number" id="amInput" placeholder="Jumlah expense">
-    <button id="addExp">Tambahkan</button>
+    <button id="addExp" onclick="tamExp()">Tambahkan</button>
+    <span id="errorMsg" style="color: red;"></span>
     <div id="expList"></div>
 
     <div id="total">
         <p>Total expenses: Rp. <span id = "totExp">0</span></p>
-        <p>Jumlah expense: Rp. <span id="amExp">0</span></p>
+        <p>Jumlah expense: <span id="amExp">0</span></p>
     </div>
 
     <script src="jawa.js"></script>
